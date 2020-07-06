@@ -23,14 +23,14 @@ function Home(props) {
                 <p className='section-intro text-uppercase'>Services</p>
                 <p className='section-subheading text-muted'>We Provide Following Services</p>
                 <div className='container service-container'>
-                    <div className='row section-content text-center'>
-                        <div className='col md-4 mr-2 ml-2 service'>
+                    <div className='row section-content justify-content-around'>
+                        <div className='col-md-3 service'>
                             <p className='mt-2'>Admin Dashboards</p>
                         </div>
-                        <div className='col md-4 mr-2 ml-2 service'>
+                        <div className='col-md-3 service'>
                             <p className='mt-2'>Landing Pages</p>
                         </div>
-                        <div className='col md-4 ml-2 mr-2 service'>
+                        <div className='col-md-3 service'>
                             <p className='mt-2'>Ebay Payments</p>
                         </div>
                     </div>
@@ -41,14 +41,14 @@ function Home(props) {
                 <p className='section-intro text-uppercase'>Templates</p>
                 <p className='section-subheading text-muted'>Some Templates We Have in the Store</p>
                 <div className='container template-container'>
-                    <div className='row template-content'>
-                        <div className='col md-4 mr-2 ml-2 template'>
+                    <div className='row template-content justify-content-around'>
+                        <div className='col-md template'>
                             <img className='demo-img' src={require('../../assets/img1.jpg')} alt="1"></img>
                         </div>
-                        <div className='col md-4 mr-2 ml-2 template'>
+                        <div className='col-md template'>
                             <img className='demo-img' src={require('../../assets/img2.jpg')} alt="2"></img>
                         </div>
-                        <div className='col md-4 ml-2 mr-2 template'>
+                        <div className='col-md template'>
                             <img className='demo-img' src={require('../../assets/img3.jpg')} alt="3"></img>
                         </div>
                     </div>

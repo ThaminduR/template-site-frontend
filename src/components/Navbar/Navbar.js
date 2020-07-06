@@ -31,7 +31,7 @@ function NavigationBar(props) {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto mr-2">
                     <li className="nav-item active mr-2">
-                        <button type="button" className="btn btn-outline-light"><a href='/'>Login</a></button>
+                        <button type="button" className="btn btn-outline-light"><a href='/login'>Login</a></button>
                     </li>
                     <li className="nav-item active">
                         <button type="button" className="btn btn-outline-light"><a href='/register'>Sign Up</a></button>

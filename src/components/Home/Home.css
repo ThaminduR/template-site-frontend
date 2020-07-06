@@ -31,19 +31,6 @@ hr {
   width: 50%;
 }
 
-.btn-circle {
-  height: 5vh;
-  width: 5vh;
-  padding: 1vh 0vh;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.arrow {
-  width: 4vh;
-  height: 4vh;
-}
-
 video {
   width: 50%;
   padding-bottom: 3vh;
@@ -78,7 +65,6 @@ video {
 
 .service {
   background-color: rgb(255, 219, 14);
-  /* max-width: 30vw; */
 }
 
 .template-container {
@@ -104,4 +90,25 @@ footer {
 
 .footer-text {
   padding-top: 4vh;
+}
+
+@media screen and (max-width: 525px) {
+  .welcome {
+    font-size: 2em;
+  }
+  .intro {
+    font-size: 1em;
+  }
+  .section-intro {
+    font-size: 1em;
+  }
+  .section-subheading {
+    font-size: 1em;
+  }
+  .section-content {
+    font-size: 1em;
+  }
+  video {
+    width: 100%;
+  }
 }

@@ -1,0 +1,48 @@
+.bg-img {
+  background-image: url("../../assets/bg3.jpg");
+  background-size: auto;
+}
+.login-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+}
+.login-card {
+  background-color: rgb(31, 31, 31);
+  padding: 5vh 5vh 5vh 5vh;
+}
+
+.login-column {
+  padding-top: 30vh;
+  padding-bottom: 10vh;
+  color: White;
+  width: auto;
+}
+
+.form-group {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+@media screen and (min-width: 760px) {
+  .login-column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-height: 615px) {
+  .login-column {
+    padding-top: 15vh;
+  }
+}
+@media screen and (max-height: 480px) {
+  .login-column {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+}
+.welcome-txt {
+  font-family: "Pacifico", cursive;
+  font-size: 2em;
+  color: rgb(255, 219, 14) !important;
+}

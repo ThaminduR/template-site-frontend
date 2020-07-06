@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import './App.css';
 import Home from './components/Home/Home';
-import RegistrationForm from './components/RegistrationForm/RegistrationForm';
+import RegisterForm from './components/Register/Register';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
 import AlertComponent from './components/AlertComponent/AlertComponent';
+import Login from './components/Login/Login';
 
 function App() {
-  const [updateTitle] = useState(null);
+  const [title, updateTitle] = useState(null);
   const [errorMessage, updateErrorMessage] = useState(null);
   return (
     <div className="App">
@@ -18,7 +19,10 @@ function App() {
         <Router>
           <Switch>
             <Route path='/register' exact={true}>
-              <RegistrationForm showError={updateErrorMessage} updateTitle={updateTitle} />
+              <RegisterForm title={title} updateTitle={updateTitle} />
+            </Route>
+            <Route path='/login' exact={true}>
+              <Login updateTitle={updateTitle} />
             </Route>
             <Route path='/' exact={true}>
               <Home />
