@@ -1,0 +1,43 @@
+.navbar-1 {
+  color: white;
+  background-color: rgba(0, 0, 0, 1);
+  font-family: "bioRhyme", serif;
+  transform: translateY(0);
+  transition: transform 0.6s ease;
+}
+
+.navbar-2 {
+  color: white;
+  background-color: rgb(31, 31, 31);
+  font-family: "bioRhyme", serif;
+  transform: translateY(10);
+  transition: transform 6s ease;
+  animation: myanimation 1s;
+}
+
+@keyframes myanimation {
+  0% {
+    background-color: rgb(31, 31, 31);
+  }
+  35% {
+    background-color: rgb(31, 31, 31);
+  }
+  100% {
+    background-color: rgb(31, 31, 31);
+  }
+}
+
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  padding-left: 2vw;
+  color: rgb(255, 219, 14) !important;
+}
+
+.nav-link {
+  font-size: 1.5em;
+}
+
+a{
+  color: white !important;
+}

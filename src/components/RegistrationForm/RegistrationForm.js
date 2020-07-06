@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
+import { API_BASE_URL } from '../../constants/constants';
+import { withRouter } from 'react-router-dom';
 function RegistrationForm(props) {
 
     const [state, setState] = useState({
         email: "",
         password: "",
-        confirmPassword: ""
+        confirmPassword: "",
+        successMessage: null,
+        errorMessage: null
 
     })
 
@@ -19,10 +23,14 @@ function RegistrationForm(props) {
 
     const handleSubmitClick = (e) => {
         e.preventDefault();
-        if (state.password == state.confirmPassword) {
+        if (state.password === state.confirmPassword) {
             sendDetailsToServer()
         } else {
-            props.showError('Passwords do not match');
+            setState(prevState => ({
+                ...prevState,
+                'errorMessage': 'Passwords do not match'
+            }))
+            // props.showError('Passwords do not match');
         }
     }
 
@@ -35,24 +43,32 @@ function RegistrationForm(props) {
                 "email": state.email,
                 "password": state.password,
             }
-            axios.post('localhost:3000/register', payload)
+            axios.post(API_BASE_URL + 'register', payload)
                 .then(function (response) {
                     if (response.data.code === 200) {
                         setState(prevState => ({
                             ...prevState,
                             'successMessage': 'Registration successful. Redirecting to home page..'
                         }))
-                        redirectToHome();
+                        //redirectToHome();
                         props.showError(null)
                     } else {
-                        props.showError("Some error ocurred");
+                        setState(prevState => ({
+                            ...prevState,
+                            'errorMessage': response.data.failure
+                        }))
+                        // props.showError(response.data.failure);
                     }
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
         } else {
-            props.showError('Please enter valid username and password')
+            setState(prevState => ({
+                ...prevState,
+                'errorMessage': 'Please enter valid username and password'
+            }))
+            // props.showError('Please enter valid username and password')
         }
     }
 
@@ -99,8 +115,19 @@ function RegistrationForm(props) {
                     Register
                 </button>
             </form>
+            <div className="alert alert-success mt-2" style={{ display: state.successMessage ? 'block' : 'none' }} role="alert">
+                {state.successMessage}
+            </div>
+            <div className="alert alert-danger mt-2" style={{ display: state.errorMessage ? 'block' : 'none' }} role="alert">
+                {state.errorMessage}
+            </div>
+            <div className="mt-2">
+                <span>Already have an account? </span>
+                <span className="loginText" >Login here</span>
+                {/* onClick={() => redirectToLogin()} */}
+            </div>
         </div>
     )
 }
 
-export default RegistrationForm;
+export default withRouter(RegistrationForm);

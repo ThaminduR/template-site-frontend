@@ -1,0 +1,107 @@
+.background {
+  color: white;
+  background-color: white;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+header {
+  background-image: url("../../assets/bg4.jpg");
+  background-size: auto;
+  height: 100vh;
+}
+.welcome {
+  padding-top: 30vh;
+  font: bold;
+  font-size: 5em;
+  font-family: "bioRhyme", serif;
+}
+
+.intro {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-family: "Karla", sans-serif;
+  font: bold;
+  font-size: 3em;
+}
+
+hr {
+  border-top: 2px solid white;
+  width: 50%;
+}
+
+.btn-circle {
+  height: 5vh;
+  width: 5vh;
+  padding: 1vh 0vh;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.arrow {
+  width: 4vh;
+  height: 4vh;
+}
+
+video {
+  width: 50%;
+  padding-bottom: 3vh;
+}
+
+.section-intro {
+  color: black;
+  padding-top: 10vh;
+  font-family: "Karla", sans-serif;
+  font: bold;
+  font-size: 3em;
+}
+
+.section-subheading {
+  color: black;
+  font-family: "Karla", sans-serif;
+  font: bold;
+  font-size: 1.5em;
+  padding-bottom: 4vh;
+}
+
+.section-content {
+  color: black;
+  font-family: "Karla", sans-serif;
+  font: bold;
+  font-size: 1.5em;
+}
+
+.service-container {
+  padding-bottom: 10vh;
+}
+
+.service {
+  background-color: rgb(255, 219, 14);
+  /* max-width: 30vw; */
+}
+
+.template-container {
+  padding-bottom: 10vh;
+}
+
+#template-examples {
+  background-color: rgb(233, 233, 233);
+}
+
+.demo-img {
+  width: 100%;
+}
+
+#video {
+  padding-bottom: 5vh;
+}
+
+footer {
+  height: 10vh;
+  background-color: rgb(31, 31, 31);
+}
+
+.footer-text {
+  padding-top: 4vh;
+}
