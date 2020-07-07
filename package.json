@@ -33,5 +33,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/ThaminduR/template-site-frontend",
+  "author": "MithunW <mithun.17@cse.mrt.ac.lk>",
+  "license": "MIT"
 }
