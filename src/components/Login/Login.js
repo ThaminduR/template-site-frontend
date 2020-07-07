@@ -38,13 +38,15 @@ function Login(props) {
                     if (response.data.code === 200) {
                         setState(prevState => ({
                             ...prevState,
-                            'successMessage': 'Login successful.'
+                            'successMessage': 'Login successful.',
+                            'errorMessage':''
                         }))
                         //redirectToHome();
                     } else {
                         setState(prevState => ({
                             ...prevState,
-                            'errorMessage': response.data.failure
+                            'errorMessage': response.data.failure,
+                            'successMessage': ''
                         }))
                     }
                 })
@@ -54,7 +56,8 @@ function Login(props) {
         } else {
             setState(prevState => ({
                 ...prevState,
-                'errorMessage': 'Please enter valid username and password'
+                'errorMessage': 'Please enter valid username and password',
+                'successMessage': ''
             }))
         }
     }

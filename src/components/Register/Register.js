@@ -32,9 +32,9 @@ function RegisterForm(props) {
         } else {
             setState(prevState => ({
                 ...prevState,
-                'errorMessage': 'Passwords do not match'
+                'errorMessage': 'Passwords do not match',
+                'successMessage': '',
             }))
-            // props.showError('Passwords do not match');
         }
     }
 
@@ -52,16 +52,17 @@ function RegisterForm(props) {
                     if (response.data.code === 200) {
                         setState(prevState => ({
                             ...prevState,
-                            'successMessage': 'Registration successful. Redirecting to home page..'
+                            'successMessage': 'Registration successful. Redirecting to home page..',
+                            'errorMessage': '',
                         }))
                         //redirectToHome();
                         props.showError(null)
                     } else {
                         setState(prevState => ({
                             ...prevState,
-                            'errorMessage': response.data.failure
+                            'errorMessage': response.data.failure,
+                            'successMessage': '',
                         }))
-                        // props.showError(response.data.failure);
                     }
                 })
                 .catch(function (error) {
@@ -70,9 +71,9 @@ function RegisterForm(props) {
         } else {
             setState(prevState => ({
                 ...prevState,
-                'errorMessage': 'Please Fill All the Fields'
+                'errorMessage': 'Please Fill All the Fields',
+                'successMessage': '',
             }))
-            // props.showError('Please enter valid username and password')
         }
     }
 
